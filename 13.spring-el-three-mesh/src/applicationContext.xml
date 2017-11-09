@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="customer" class="com.yiidian.domain.Customer">
+        <property name="warning" value="#{itemBean.qtyOnHand &lt; 100 ? true : false}" />
+    </bean>
+ 
+    <bean id="itemBean" class="com.yiidian.domain.Item">
+        <property name="qtyOnHand" value="99" />
+    </bean>
+
+
+</beans>

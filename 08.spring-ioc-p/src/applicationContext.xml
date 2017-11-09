@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	 <bean id="customerDao" class="com.yiidian.dao.impl.CustomerDaoImpl"></bean>
+	 
+	 <!-- 
+	 	注意：引入属性值和引入一个对象不同。
+	 	               引入属性直接写 p:[属性名]=[属性值]；
+	 	               引入引用对象写：p[属性名-ref]=[属性值]
+	  -->
+	 <bean id="customerService" class="com.yiidian.service.impl.CustomerServiceImpl" p:customerDao-ref="customerDao"></bean>
+    
+</beans>

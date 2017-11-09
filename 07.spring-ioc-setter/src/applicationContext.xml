@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	 <bean id="customerDao" class="com.yiidian.dao.impl.CustomerDaoImpl"></bean>
+	 
+	 <bean id="customerService" class="com.yiidian.service.impl.CustomerServiceImpl">
+	 		<!-- 
+	 			name:代表CustomerServiceImpl中的setter方法名称
+	 			ref：代表引用另一个bean对象，即CustomerDaoImpl对象
+	 		 -->
+	 		<property name="customerDao" ref="customerDao"></property>	 
+	 </bean>
+    
+</beans>

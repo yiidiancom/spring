@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 基于AspectJ的spring的AOP编写之XML方式 -->
+	
+	<!-- 1.创建目标对象 -->
+	<bean id="customerService" class="com.yiidian.service.impl.CustomerServiceImpl"/>
+	
+	<!-- 2.创建切面类对象 -->
+	<bean id="myAspect" class="com.yiidian.aspect.MyAspect"/>
+	
+	<!-- 3.配置AOP切面 -->
+	<aop:config>
+		<!-- 切面 = 通知+切入点 -->
+		<aop:aspect ref="myAspect">
+			<!-- 
+				aop:before: 代表前置通知（后面会详细介绍各种不同类型的通知的用法）
+				writeLog: 该方法为MyAspect类中的writeLog方法
+				pointcut-ref： 代表引用一个切入点
+			 -->
+			<aop:before method="before" pointcut-ref="pt"/>
+			<!-- 
+				aop:pointcut：代表切入点配置
+				expression：这里配置切入点表达式，用于声明哪些方法需要被拦截
+			 -->
+			<aop:pointcut expression="execution(public void com.yiidian.service.impl.CustomerServiceImpl.*(..))" id="pt"/>
+		</aop:aspect>
+	</aop:config>
+	
+</beans>
