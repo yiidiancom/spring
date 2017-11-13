@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/spring-aop-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-aspects-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-beans-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-support-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-core-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-expression-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-test-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-jdbc-4.3.3.RELEASE.jar" sourcepath="F:/personal/课程内容/SSH实战系统课程/Spring实战教程/授课资源/spring-framework-4.3.3.RELEASE/libs/spring-jdbc-4.3.3.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="lib/spring-tx-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
